@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Website</title>
+  <title>CHRNOQUEST</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
   <style>
@@ -20,12 +20,13 @@
       text-align: center;
       z-index: 10;
     }
-
-    .logo{
-      display: block;
-      margin: auto;
+    .logo {
+      position: absolute; /* Use absolute positioning */
+      top: 40%; /* Vertically center */
+      left: 50%; /* Horizontally center */
+      transform: translate(-50%, -50%); /* Offset by half of its width and height */
+      z-index: 10; /* Ensure it's above other elements */
     }
-
     .start-button {
       position: absolute;
       top: 80%;
@@ -118,10 +119,14 @@
       height: 100%;
       z-index: 1;
     }
-
     img {
       filter: brightness(100%) contrast(200%);
+      position: absolute;  /* Position the image absolutely */
+      top: 10px;  /* Adjust for some space from the top */
+      left: 10px;  /* Adjust for some space from the left */
+       z-index: 10;  /* Ensure it's above the background */
     }
+    
   </style>
 </head>
 <body>
@@ -148,7 +153,7 @@
   <div class="buttons" id="menu">
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
-    <a href="game.html">GAME</a>
+    <a href="startuptype.html">GAME</a>
   </div>
 
   <img src="DALL_E_2025-01-29_21.15.52_-_A_futuristic_and_adventurous_logo_for_the_game__ChronoQuest_._The_design_should_incorporate_elements_of_time_travel__such_as_a_sleek__glowing_time_por-removebg-preview.png" alt="ChronoQuest Logo" width="70">
@@ -162,7 +167,7 @@
 
     // Add event listener for Start Game button
     document.getElementById("start-button").addEventListener("click", function() {
-      window.location.href = "game.html";
+      window.location.href = "startuptype.html";
     });
   </script>
 </body>
